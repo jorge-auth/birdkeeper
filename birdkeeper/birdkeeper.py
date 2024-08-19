@@ -10,14 +10,15 @@ from time import sleep
 import configparser
 import os
 
+
 config = configparser.ConfigParser()
 fn = "birds.ini"
 
 try:
     config_path = os.path.join("/etc/birdkeeper", fn)
     config.read(config_path)
-except:
-    logging.error("Missing configuration file /etc/birdskeeper/bird.ini")
+except configparser.ParsingError as e:
+    logging.error("Missing configuration file {e}")
     sys.exit()
 
 try:
