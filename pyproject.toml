@@ -7,6 +7,9 @@ authors = ["jack-auth"]
 [tool.poetry.dependencies]
 python = "^3.10"
 click = "^8.1.7"
+requests = "^2.32.3"
+urllib3 = "^2.2.2"
+requests-toolbelt = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 
